@@ -1,7 +1,11 @@
 const readlineSync = require("readline-sync");
 
-const name = readlineSync.question("Width:\n");
+const width = readlineSync.question("\nWidth: ");
 
-const name = readlineSync.question("Length:\n");
+const length = readlineSync.question("Length: ");
 
-console.log("n")
+const widthconversion = (width * 25.4);
+
+const lengthconversion = (length * 25.4);
+
+console.log("\nA(n) " + width + "-by-" + length + "-inch sheet of paper has an area of " + (widthconversion * lengthconversion).toFixed(2) + " square millimeter(s).\n")
