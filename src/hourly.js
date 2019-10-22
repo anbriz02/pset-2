@@ -18,4 +18,4 @@ const sun = readlineSync.question("Sunday: ");
 
 const weekly = (mon*hourly)+(tues*hourly)+(wed*hourly)+(thurs*hourly)+(fri*hourly)+(sat*hourly)+(sun*hourly)
 
-console.log("\nYou'll make " + "$"+weekly.toFixed(2) + " this week.\n")
+console.log("\nYou'll make " + "$"+Math.abs(weekly).toFixed(2) + " this week.\n")
