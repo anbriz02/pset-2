@@ -4,12 +4,12 @@ const students = readlineSync.question("\nStudents: ");
 
 const teachers = readlineSync.question("Teachers: ");
 
-const buscapacity = readlineSync.question("Bus capacity: ");
+const busCapacity = readlineSync.question("Bus capacity: ");
 
 let passengers = +students+ +teachers;
 
-let bus = (passengers/buscapacity);
+let bus = (passengers/busCapacity);
 
-let passrem = passengers % buscapacity;
+let passRem = passengers % busCapacity;
 
-console.log("\n" + Math.round(bus) + " bus(es) is (are) needed, with " + passrem + " passenger(s) on the last bus.\n")
+console.log("\n" + Math.round(bus) + " bus(es) is (are) needed, with " + passRem + " passenger(s) on the last bus.\n")

@@ -2,18 +2,24 @@ const readlineSync = require("readline-sync");
 
 const salary = readlineSync.question("\nAnnual salary: ");
 
-const contribution = 0.07*2
+const biMonthly = salary/24
 
-const fed = 0.157*2
+const contribution = (0.07*biMonthly)
 
-const state = .447*2
+const check401 = biMonthly-(contribution)
 
-const social = 0.062*2
+const fed = (0.157*check401)
 
-const medicare = 0.0145*2
+const state = (0.0447*check401)
 
-const monthly = salary-(contribution,fed,state,social,medicare)
+const social = (0.062*check401)
+
+const medicare = (0.0145*check401)
+
+const afterTax = (fed+state+social+medicare)
+
+const check = (check401-afterTax).toLocaleString("en", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
 
 
 
-console.log("\nYour take-home pay each check will be " + "$"+ monthly + ".\n")
+console.log("\nYour take-home pay each check will be " + "$"+ (check) + ".\n")
